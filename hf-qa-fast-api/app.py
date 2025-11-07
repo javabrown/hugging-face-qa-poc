@@ -99,7 +99,7 @@ def load_gen_pipeline_once():
 def _startup():
     banner = f"""
 ============================================================
-HF QA Service (Transformers pipelines)
+HuggingFace Q/A Service (Transformers pipelines)
 Extractive:
   Task : {TASK}
   Model: {MODEL_ID}
@@ -251,7 +251,7 @@ def ui():
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>HF QA Service – UI</title>
+  <title>Hugging Face Q/A Service – UI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root { --bg:#0f172a; --card:#111827; --muted:#334155; --fg:#e5e7eb; --accent:#22d3ee; }
@@ -274,7 +274,7 @@ def ui():
 <body>
   <div class="wrap">
     <div class="card">
-      <h1>HF QA Service</h1>
+      <h1>Hugging Face QA Service</h1>
       <div class="muted">Try either Extractive (<code>/predict</code>) or Abstractive (<code>/predict_abstractive</code>)</div>
 
       <div class="tabs">
