@@ -1,0 +1,30 @@
+Test it
+------
+
+curl -s http://localhost:8095/healthz | jq
+
+curl -s -X POST http://localhost:8095/predict \
+-H 'content-type: application/json' \
+-d '{"context":"Lawrence Township is in Mercer County, New Jersey.","question":"Where is Lawrence Township located?"}' | jq
+
+
+
+
+ curl -s -X POST http://localhost:9090/predict/batch \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "items": [
+      {
+        "context": "The Eiffel Tower is located in Paris, France.",
+        "question": "Where is the Eiffel Tower located?"
+      },
+      {
+        "context": "Mount Everest is the tallest mountain on Earth, located in the Himalayas.",
+        "question": "What is the tallest mountain on Earth?"
+      }
+    ]
+  }' | jq
+
+
+
+http://localhost:9090/ui
