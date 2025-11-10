@@ -18,7 +18,7 @@ GEN_MODEL_ID = os.environ.get("GEN_MODEL_ID", "google/flan-t5-small")
 MAX_SEQ_LEN = int(os.environ.get("MAX_SEQ_LEN", 384))
 DOC_STRIDE = int(os.environ.get("DOC_STRIDE", 128))
 ANSWER_THRESHOLD = float(os.environ.get("ANSWER_THRESHOLD", 0.20))
-RETURN_N_BEST = int(os.environ.get("RETURN_N_BEST", 3))
+RETURN_N_BEST = int(os.environ.get("RETURN_N_BEST", 5))
 
 # Offline-safe defaults
 os.environ.setdefault("HF_HOME", "/models")
